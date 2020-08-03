@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F0F3F2</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#C56084</color>
+    <color name="adminColor">#579BD1</color>
+    <color name="userColor">#AF5032</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorPurple">#983CFF</color>
+    <color name="colorPurpleT">#64983cff</color>
+    <color name="colorBlue">#2FB4FF</color>
+    <color name="colorBlueT">#642fb4ff</color>
+</resources>

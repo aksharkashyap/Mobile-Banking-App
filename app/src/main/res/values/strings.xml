@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">MobileBanking</string>
+    <string name="manage_beneficiary">Manage Beneficiary</string>
+    <string name="apply_check_book">Apply Check Book</string>
+    <string name="apply_dd">Apply DD</string>
+    <string name="quick_fund_transer">Quick Fund Transer</string>
+    <string name="mini_statement">Mini Statement</string>
+    <string name="upload_pan">Upload Pan</string>
+    <string name="upload_adhar">Upload Adhar</string>
+    <string name="balance_check">Balance Check</string>
+    <string name="add_user">ADD USER</string>
+    <string name="administrator_s_portal">ADMINISTRATOR\'S PORTAL</string>
+    <string name="verify_adhar">Verify Adhar</string>
+    <string name="verify_pan">Verify Pan</string>
+    <string name="search_user">SEARCH USER</string>
+    <string name="delete_user">DELETE USER</string>
+    <string name="approve_dd">APPROVE DD</string>
+    <string name="issue_debit_card">Issue Debit Card</string>
+    <string name="issue_check_book">Issue Check Book</string>
+    <string name="title_activity_delete_user">DeleteUser</string>
+</resources>

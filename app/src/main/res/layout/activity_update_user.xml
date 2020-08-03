@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<androidx.appcompat.widget.Toolbar
+    android:id="@+id/bgHeader"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@drawable/header_register"
+    android:elevation="5dp"
+    android:theme="@style/ToolbarTheme" />
+
+<TextView
+    android:id="@+id/add_user_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="40dp"
+    android:elevation="10dp"
+    android:text="Update User"
+    android:textColor="@color/colorWhite"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    />
+
+
+<ImageView
+    android:id="@+id/circle1"
+    android:layout_width="134dp"
+    android:layout_height="134dp"
+    android:layout_below="@+id/bgHeader"
+    android:layout_marginLeft="-25dp"
+    android:layout_marginTop="-5dp"
+    android:src="@drawable/circletransparant" />
+
+<ImageView
+    android:id="@+id/circle3"
+    android:layout_width="182dp"
+    android:layout_height="182dp"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentBottom="true"
+    android:layout_marginLeft="-80dp"
+    android:layout_marginBottom="-30dp"
+    android:src="@drawable/circle" />
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/bgHeader"
+    android:layout_margin="20dp">
+
+    <RelativeLayout
+        android:id="@+id/rlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="4dp">
+
+
+            <RelativeLayout
+                android:id="@+id/rl2"
+                android:elevation="10dp"
+                android:layout_marginBottom="-20dp"
+                android:layout_below="@id/bgHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/update_user_get_data"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_ui"
+                    android:onClick="update_user_getData"
+                    android:text="Get Data"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite" />
+
+                <EditText
+                    android:gravity="center"
+                    android:layout_marginLeft="40dp"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/update_user_get_data"
+                    android:hint="Enter Account"
+                    android:id="@+id/update_user_getAcc"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:inputType="textPersonName" />
+
+                <Button
+                    android:visibility="invisible"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/bg_ui"
+                    android:enabled="false"
+                    android:onClick="update_user_resetGetDataFunc"
+                    android:id="@+id/update_user_resetGetdata"
+                    android:text="reset"
+                    android:textColor="@color/colorWhite"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:layout_marginTop="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="30dp">
+
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:id="@+id/update_user_layout2"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Name"
+                        android:textColor="@color/colorPurple"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/update_user_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:inputType="textPersonName" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Email"
+                        android:textColor="@color/colorPurple"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/update_user_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:inputType="textEmailAddress" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Mobile Number"
+                        android:textColor="@color/colorPurple"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/update_user_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:inputType="phone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Father"
+                        android:textColor="@color/colorPurple"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/update_user_father"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:inputType="textPersonName" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Date of Birth"
+                        android:textColor="@color/colorPurple"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/update_user_dob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:inputType="text" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Address"
+                        android:textColor="@color/colorPurple"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/update_user_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:inputType="textPostalAddress" />
+
+                    <RadioGroup
+                        android:id="@+id/update_user_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="GENDER:"
+                            android:textColor="@color/colorPurple"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/update_user_rb_male"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="MALE"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/update_user_rb_female"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="FEMALE"
+                            android:textSize="14sp" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="SERVICES: "
+                            android:textColor="@color/colorPurple"
+                            android:textSize="14sp" />
+
+                        <CheckBox
+                            android:id="@+id/update_user_cb_sms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SMS"
+                            android:textSize="14sp" />
+
+                        <CheckBox
+                            android:id="@+id/update_user_cb_netbanking"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Net Banking"
+                            android:textSize="14sp" />
+
+                        <CheckBox
+                            android:id="@+id/update_user_cb_atm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ATM"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:id="@+id/update_user_account_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="Account Type:"
+                            android:textColor="@color/colorPurple"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/update_user_savingAcc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Saving"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/update_user_currentAcc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Current"
+                            android:textSize="14sp" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/update_user_infoAcc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Customer Account Number/Password is: "
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/update_user_submit_layout"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cv"
+            android:layout_alignLeft="@+id/cv"
+            android:layout_alignRight="@+id/cv"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="-35dp"
+            android:layout_marginRight="35dp"
+            android:elevation="10dp">
+
+            <Button
+                android:id="@+id/update_user_submit"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_ui"
+                android:onClick="update_user_submit"
+                android:text="Update"
+                android:textColor="@color/colorWhite" />
+
+            <Button
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/bg_ui2"
+                android:layout_toRightOf="@+id/update_user_submit"
+                android:enabled="false"
+                android:onClick="delete_user"
+                android:id="@+id/update_user_delete"
+                android:text="DELETE User"
+                android:textColor="@color/colorWhite"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>
+
+</RelativeLayout>
